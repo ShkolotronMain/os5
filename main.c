@@ -90,7 +90,7 @@ DWORD WINAPI set_number()
 }
 
 
-float main()
+int main()
 {
     // 0 - prod
     // 1 - cons
@@ -107,4 +107,6 @@ float main()
     CloseHandle(threads[0]);
     CloseHandle(threads[1]);
     CloseHandle(threads[2]);
+
+    return 0;
 }
