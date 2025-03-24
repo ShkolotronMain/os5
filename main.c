@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 // Общие данные
-#define BUF_SIZE 12
+#define BUF_SIZE 10
 int used = 0;
 int buffer[BUF_SIZE] = {0};
 
@@ -104,9 +104,8 @@ int main()
 
     WaitForMultipleObjects(3, threads, TRUE, INFINITE);
 
-    CloseHandle(threads[0]);
-    CloseHandle(threads[1]);
-    CloseHandle(threads[2]);
+    for(int i=0; i<3; i++)
+        CloseHandle(threads[i]);
 
     return 0;
 }
